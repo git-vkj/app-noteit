@@ -1,0 +1,32 @@
+{
+  "name": "noteit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+   "node": "16.17.0"
+ },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd noteit && npm run start",
+    "client-install": "cd noteit && npm install",
+    "server-install": "npm install",
+    "install-all": "concurrently \"npm run client-install\" \"npm run server-install\" ",
+    "dev": "concurrently \"npm run client\" \"npm run server\" ",
+    "heroku-postbuild": "cd noteit && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
